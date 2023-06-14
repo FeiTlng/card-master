@@ -1,3 +1,12 @@
+# osx
+.DS_Store/
+
+# idea
+*.iml
+target/
+test/
+
+
 # Compiled class file
 *.class
 
