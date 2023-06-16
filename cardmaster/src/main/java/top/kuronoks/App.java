@@ -1,9 +1,10 @@
 package top.kuronoks;
 
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello Card Master!" );
+import top.kuronoks.core.server.CMServer;
+
+public class App {
+    public static void main(String[] args) {
+        CMServer cmServer = new CMServer();
+        cmServer.bind();
     }
 }
