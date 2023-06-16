@@ -1,4 +1,4 @@
-package top.kuronoks.core.server.handlers;
+package top.kuronoks.core.server.handler;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandler;
