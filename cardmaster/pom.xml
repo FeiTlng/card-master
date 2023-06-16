@@ -1,111 +1,100 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-  <groupId>top.kuronoks</groupId>
-  <artifactId>card-master</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
+    <groupId>top.kuronoks</groupId>
+    <artifactId>card-master</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
-  <name>card-master</name>
-  <url>http://maven.apache.org</url>
+    <name>card-master</name>
+    <url>http://maven.apache.org</url>
 
-  <properties>
-    <maven.compiler.source>17</maven.compiler.source>
-    <maven.compiler.target>17</maven.compiler.target>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
-
-    <log4j2.version>2.20.0</log4j2.version>
-    <log4j2-api.version>2.20.0</log4j2-api.version>
-    <log4j2-slf4j.version>2.20.0</log4j2-slf4j.version>
-    <slf4j.version>2.0.7</slf4j.version>
-    <lombok.verion>1.18.28</lombok.verion>
-
-    <netty.version>4.1.93.Final</netty.version>
-    <redisson.version>3.22.0</redisson.version>
-  </properties>
-
-  <dependencies>
-    <!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
-    <dependency>
-      <groupId>io.netty</groupId>
-      <artifactId>netty-all</artifactId>
-      <version>4.1.93.Final</version>
-    </dependency>
-
-    <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-api</artifactId>
-      <version>${slf4j.version}</version>
-    </dependency>
-
-    <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-slf4j2-impl -->
-    <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-slf4j2-impl</artifactId>
-      <version>2.20.0</version>
-      <scope>test</scope>
-    </dependency>
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 
+        <log4j2.version>2.20.0</log4j2.version>
+        <log4j2-api.version>2.20.0</log4j2-api.version>
+        <log4j2-slf4j.version>2.20.0</log4j2-slf4j.version>
+        <slf4j.version>2.0.7</slf4j.version>
+        <lombok.verion>1.18.28</lombok.verion>
+        <protobuf.version>3.23.2</protobuf.version>
 
-    <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
-    <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-core</artifactId>
-      <version>${log4j2.version}</version>
-    </dependency>
+        <netty.version>4.1.93.Final</netty.version>
+        <redisson.version>3.22.0</redisson.version>
+    </properties>
 
-    <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
-    <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-api</artifactId>
-      <version>${log4j2-api.version}</version>
-    </dependency>
+    <dependencies>
 
+        <!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>${netty.version}</version>
+        </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.redisson/redisson -->
+        <dependency>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson</artifactId>
+            <version>${redisson.version}</version>
+        </dependency>
 
-    <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
-    <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-      <version>${lombok.verion}</version>
-      <scope>provided</scope>
-    </dependency>
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
 
-
-
-    <dependency>
-      <groupId>com.google.protobuf</groupId>
-      <artifactId>protobuf-java</artifactId>
-      <version>3.23.2</version>
-    </dependency>
-
-
-
-
-    <!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
-    <dependency>
-      <groupId>io.netty</groupId>
-      <artifactId>netty-all</artifactId>
-      <version>${netty.version}</version>
-    </dependency>
-
-    <!-- https://mvnrepository.com/artifact/org.redisson/redisson -->
-    <dependency>
-      <groupId>org.redisson</groupId>
-      <artifactId>redisson</artifactId>
-      <version>${redisson.version}</version>
-    </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-slf4j2-impl -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j2-impl</artifactId>
+            <version>${log4j2-slf4j.version}</version>
+        </dependency>
 
 
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
+        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>${log4j2.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>${log4j2-api.version}</version>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.verion}</version>
+            <scope>provided</scope>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>${protobuf.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 </project>
