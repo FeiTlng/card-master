@@ -6,6 +6,8 @@
 target/
 test/
 .idea/
+log/
+out/
 
 
 # Compiled class file
