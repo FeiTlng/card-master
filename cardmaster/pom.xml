@@ -23,9 +23,9 @@
         <slf4j.version>2.0.7</slf4j.version>
         <lombok.verion>1.18.28</lombok.verion>
         <protobuf.version>3.23.2</protobuf.version>
-
         <netty.version>4.1.93.Final</netty.version>
         <redisson.version>3.22.0</redisson.version>
+        <commons-lang3.version>3.12.0</commons-lang3.version>
     </properties>
 
     <dependencies>
@@ -87,6 +87,13 @@
             <groupId>com.google.protobuf</groupId>
             <artifactId>protobuf-java</artifactId>
             <version>${protobuf.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons-lang3.version}</version>
         </dependency>
 
 
