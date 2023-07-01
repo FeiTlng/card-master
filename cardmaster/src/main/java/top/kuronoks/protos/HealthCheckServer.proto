@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+option optimize_for=SPEED;
+option java_package = "top.kuronoks.protos.models.health";
+option java_outer_classname = "HealthCheckServer";
+
+message Ping {
+  int64 ping = 1;
+}
