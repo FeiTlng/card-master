@@ -1,4 +1,4 @@
-package top.kuronoks.core.base;
+package top.kuronoks.card.core.base;
 
 public class NormalLogAspect implements ILogAspect {
     @Override

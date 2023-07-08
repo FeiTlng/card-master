@@ -1,4 +1,4 @@
-package top.kuronoks.configs;
+package top.kuronoks.card.configs;
 
 public class ClickHouseConfig {
 }

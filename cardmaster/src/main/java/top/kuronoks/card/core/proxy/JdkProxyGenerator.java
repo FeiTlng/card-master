@@ -1,7 +1,7 @@
-package top.kuronoks.core.proxy;
+package top.kuronoks.card.core.proxy;
 
-import top.kuronoks.core.base.ILogAspect;
-import top.kuronoks.core.base.IPointCut;
+import top.kuronoks.card.core.base.ILogAspect;
+import top.kuronoks.card.core.base.IPointCut;
 
 import java.lang.reflect.Proxy;
 

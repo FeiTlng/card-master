@@ -1,9 +1,10 @@
-package top.kuronoks.core.server.handler;
+package top.kuronoks.card.core.server.handler;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
+import top.kuronoks.card.protos.models.health.HealthCheckServer;
 
 import java.nio.charset.StandardCharsets;
 
@@ -31,6 +32,17 @@ public class SimpleHandler extends ChannelInboundHandlerAdapter {
     public void channelReadComplete(ChannelHandlerContext ctx) {
         // super.channelReadComplete(ctx);
         System.out.println("Complete..");
+    }
+
+
+    @Override
+    public void userEventTriggered(ChannelHandlerContext ctx, Object evt) throws Exception {
+        // super.userEventTriggered( ctx, evt );
+        HealthCheckServer.Ping  ping = HealthCheckServer.Ping.newBuilder().
+                setPing( 1 ).
+                build();
+
+        ctx.channel().writeAndFlush( ping );
     }
 
     @Override
